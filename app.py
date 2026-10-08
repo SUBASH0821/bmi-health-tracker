@@ -1,4 +1,4 @@
-from streamlit import streamlit as st, render_template, request, redirect, url_for
+import streamlit as st, render_template, request, redirect, url_for
 import sqlite3
 from datetime import datetime
 
