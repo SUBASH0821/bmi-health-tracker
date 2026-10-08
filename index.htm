@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BMI Health Tracker</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">BMI Health Tracker</div>
+
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/calculator">BMI Calculator</a>
+        <a href="/history">Health History</a>
+        <a href="/about">About</a>
+    </div>
+</nav>
+
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>BMI Calculator & Health Tracker</h1>
+
+        <p>
+            Calculate your Body Mass Index and maintain
+            a simple record of your health measurements.
+        </p>
+
+        <a href="/calculator" class="button">
+            Calculate BMI
+        </a>
+
+    </div>
+
+</section>
+
+
+<section class="features">
+
+    <h2>Project Features</h2>
+
+    <div class="feature-container">
+
+        <div class="feature-card">
+
+            <h3>🧮 BMI Calculator</h3>
+
+            <p>
+                Calculate BMI using your height and weight.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <h3>📊 Health Tracking</h3>
+
+            <p>
+                Store and review your previous BMI measurements.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <h3>📋 Health History</h3>
+
+            <p>
+                View your recorded health information in one place.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <p>
+        BMI Health Tracker | Health Informatics Project
+    </p>
+
+</footer>
+
+</body>
+</html>
