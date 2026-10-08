@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI History</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">BMI Health Tracker</div>
+
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/calculator">Calculator</a>
+        <a href="/history">History</a>
+        <a href="/about">About</a>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="card">
+        <h1>BMI History</h1>
+
+        {% if records %}
+
+        <div class="table-container">
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Height</th>
+                        <th>Weight</th>
+                        <th>BMI</th>
+                        <th>Category</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    {% for record in records %}
+
+                    <tr>
+                        <td>{{ record.name }}</td>
+                        <td>{{ record.age }}</td>
+                        <td>{{ record.height }} cm</td>
+                        <td>{{ record.weight }} kg</td>
+                        <td>{{ record.bmi }}</td>
+                        <td>{{ record.category }}</td>
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+        </div>
+
+        {% else %}
+
+        <p class="empty">
+            No BMI records found.
+        </p>
+
+        <a href="/calculator" class="button">
+            Calculate Your BMI
+        </a>
+
+        {% endif %}
+
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 BMI Health Tracker</p>
+</footer>
+
+</body>
+</html>
