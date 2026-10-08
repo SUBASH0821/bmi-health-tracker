@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About - BMI Health Tracker</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">
+        BMI Health Tracker
+    </div>
+
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/calculator">Calculator</a>
+        <a href="/history">History</a>
+        <a href="/about">About</a>
+    </div>
+
+</nav>
+
+
+<div class="container">
+
+    <div class="card">
+
+        <h1>About BMI Health Tracker</h1>
+
+        <p>
+            BMI Health Tracker is a simple web application that
+            calculates Body Mass Index (BMI) based on height and weight.
+        </p>
+
+        <h2>What is BMI?</h2>
+
+        <p>
+            Body Mass Index is a commonly used screening measurement
+            based on a person's weight and height.
+        </p>
+
+        <h2>BMI Categories</h2>
+
+        <ul>
+            <li>Below 18.5 - Underweight</li>
+            <li>18.5 to 24.9 - Normal weight</li>
+            <li>25 to 29.9 - Overweight</li>
+            <li>30 and above - Obesity</li>
+        </ul>
+
+        <p class="note">
+            BMI is a general screening measure and is not a diagnosis
+            of individual health.
+        </p>
+
+    </div>
+
+</div>
+
+
+<footer>
+    <p>© 2026 BMI Health Tracker</p>
+</footer>
+
+</body>
+</html>
