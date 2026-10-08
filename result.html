@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BMI Result</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">
+        BMI Health Tracker
+    </div>
+
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/calculator">Calculator</a>
+        <a href="/history">History</a>
+        <a href="/about">About</a>
+    </div>
+
+</nav>
+
+
+<div class="container">
+
+    <div class="card result-card">
+
+        <h1>BMI Result</h1>
+
+        <p>Hello, <strong>{{ record.name }}</strong>!</p>
+
+        <div class="result-box">
+
+            <h2>Your BMI</h2>
+
+            <div class="bmi-number">
+                {{ record.bmi }}
+            </div>
+
+            <h3>{{ record.category }}</h3>
+
+        </div>
+
+
+        <div class="details">
+
+            <p>
+                <strong>Age:</strong>
+                {{ record.age }} years
+            </p>
+
+            <p>
+                <strong>Height:</strong>
+                {{ record.height }} cm
+            </p>
+
+            <p>
+                <strong>Weight:</strong>
+                {{ record.weight }} kg
+            </p>
+
+        </div>
+
+
+        <div class="bmi-info">
+
+            <h2>BMI Categories</h2>
+
+            <p>
+                <span>Below 18.5</span> - Underweight
+            </p>
+
+            <p>
+                <span>18.5 - 24.9</span> - Normal weight
+            </p>
+
+            <p>
+                <span>25 - 29.9</span> - Overweight
+            </p>
+
+            <p>
+                <span>30 and above</span> - Obesity
+            </p>
+
+        </div>
+
+
+        <div class="result-buttons">
+
+            <a href="/calculator" class="button">
+                Calculate Again
+            </a>
+
+            <a href="/history" class="button secondary">
+                View History
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<footer>
+    <p>© 2026 BMI Health Tracker</p>
+</footer>
+
+</body>
+</html>
