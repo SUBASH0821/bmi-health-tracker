@@ -51,9 +51,11 @@ def get_category(bmi):
         return "Obesity"
 
 
-@app.route("/")
-def index():
-    return render_template("index.html")
+# Replace lines 55-56 with this native Streamlit code:
+import streamlit as st
+
+st.title("BMI Health Tracker")
+st.write("Welcome to the application!")
 
 
 @app.route("/calculator", methods=["GET", "POST"])
