@@ -58,10 +58,25 @@ st.title("BMI Health Tracker")
 st.write("Welcome to the application!")
 
 
-@app.route("/calculator", methods=["GET", "POST"])
-def calculator():
+import streamlit as st
 
-    result = None
+st.write("Welcome to the application!")
+
+# Create a clean UI section for your calculator instead of a route
+st.subheader("BMI Calculator")
+
+with st.form("bmi_calculator_form"):
+    weight = st.number_input("Weight (kg)", min_value=1.0, value=70.0)
+    height = st.number_input("Height (m)", min_value=0.5, value=1.75)
+    
+    # This acts like your "POST" submission button
+    submit_button = st.form_submit_button(label="Calculate BMI")
+
+if submit_button:
+    # This logic runs immediately when the button is clicked
+    bmi = weight / (height ** 2)
+    st.success(f"Your calculated BMI is: {bmi:.2f}")
+
 
     if request.method == "POST":
 
